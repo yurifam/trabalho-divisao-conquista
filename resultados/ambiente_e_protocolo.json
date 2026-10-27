@@ -1,0 +1,64 @@
+{
+  "inicio_utc": "2026-10-27T18:41:08.635251+00:00",
+  "termino_utc": "2026-10-27T18:42:22.111298+00:00",
+  "repeticoes": 5,
+  "tamanhos": [
+    100,
+    200,
+    400,
+    800,
+    1600,
+    3200,
+    6400
+  ],
+  "limiar_escolhido": 8,
+  "limiares_testados": [
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "calibracao_media_ns": {
+    "200": {
+      "4": 534994.2,
+      "8": 578235.2,
+      "16": 643169.2,
+      "32": 1016952.2,
+      "64": 1650041.6
+    },
+    "800": {
+      "4": 2691789.2,
+      "8": 2660396.2,
+      "16": 3274996.2,
+      "32": 4587582,
+      "64": 7716463.4
+    },
+    "3200": {
+      "4": 24910311.6,
+      "8": 12581501,
+      "16": 16087725.6,
+      "32": 20451515.2,
+      "64": 32795898
+    }
+  },
+  "pontuacoes_calibracao": {
+    "4": 1.2606092137429754,
+    "8": 1.026246803321303,
+    "16": 1.2368991187291223,
+    "32": 1.746602215962937,
+    "64": 2.8569433181529647
+  },
+  "dados": "subarranjo: inteiros uniformes [-100,100]; pontos: unicos aleatorios inteiros [-1e6,1e6]^2",
+  "maquina": {
+    "sistema": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "arquitetura": "x86_64",
+    "processador_identificado": "AMD EPYC 9V74 80-Core Processor",
+    "cpus_visiveis": 5,
+    "quota_cpu_cgroup": "400000 100000",
+    "limite_memoria_cgroup_bytes": "4294967296",
+    "python": "3.13.5",
+    "temporizador": "time.perf_counter_ns"
+  },
+  "observacao": "CPU e memoria informadas pelo contêiner de execução, não pela máquina do aluno."
+}

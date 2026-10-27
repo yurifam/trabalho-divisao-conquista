@@ -1,0 +1,11 @@
+test_entradas_invalidas (test_algoritmos.TestCasosComSaidasEsperadas.test_entradas_invalidas) ... ok
+test_pontos_fixtures (test_algoritmos.TestCasosComSaidasEsperadas.test_pontos_fixtures) ... ok
+test_subarranjo_fixtures (test_algoritmos.TestCasosComSaidasEsperadas.test_subarranjo_fixtures) ... ok
+test_pontos_randomizados_por_limiar (test_algoritmos.TestDiferencial.test_pontos_randomizados_por_limiar) ... ok
+test_pontos_sem_duplicatas_ties (test_algoritmos.TestDiferencial.test_pontos_sem_duplicatas_ties) ... ok
+test_subarranjo_randomizado (test_algoritmos.TestDiferencial.test_subarranjo_randomizado) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.020s
+
+OK
