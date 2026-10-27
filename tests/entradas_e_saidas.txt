@@ -1,0 +1,198 @@
+CASOS DE TESTE DOCUMENTADOS — ÍNDICES BASE ZERO
+Empates na Etapa 2: qualquer par de distância mínima é válido.
+
+ETAPA 1 — SUBARRANJO DE SOMA MÁXIMA
+=============================================
+
+S01 | tamanho unitario positivo
+Entrada:
+1
+7
+Saída esperada:
+7 0 0
+
+S02 | tamanho unitario negativo
+Entrada:
+1
+-7
+Saída esperada:
+-7 0 0
+
+S03 | todos negativos
+Entrada:
+6
+-8 -3 -6 -2 -5 -4
+Saída esperada:
+-2 3 3
+
+S04 | todos zeros e multiplos empates
+Entrada:
+3
+0 0 0
+Saída esperada:
+0 0 0
+
+S05 | empate entre intervalos com mesma soma
+Entrada:
+4
+2 -2 2 -2
+Saída esperada:
+2 0 0
+
+S06 | melhor intervalo cruza meio
+Entrada:
+9
+-2 1 -3 4 -1 2 1 -5 4
+Saída esperada:
+6 3 6
+
+S07 | empate com intervalos de comprimentos distintos
+Entrada:
+3
+0 5 0
+Saída esperada:
+5 0 1
+
+S08 | maximo no inicio e empate com final
+Entrada:
+5
+3 -1 2 -5 4
+Saída esperada:
+4 0 2
+
+S09 | todos positivos
+Entrada:
+4
+1 2 3 4
+Saída esperada:
+10 0 3
+
+S10 | zero antes do maximo, menor inicio
+Entrada:
+3
+0 -1 5
+Saída esperada:
+5 2 2
+
+S11 | numeros grandes
+Entrada:
+4
+-1000000000000 5000000000000 -1 3
+Saída esperada:
+5000000000002 1 3
+
+
+ETAPA 2 — PAR DE PONTOS MAIS PRÓXIMO
+=============================================
+
+P01 | menor entrada valida e tripla pitagorica
+Entrada:
+2
+0 0
+3 4
+Saída esperada (distância ao quadrado): 25
+Exemplo de par ótimo: índices 0 e 1.
+
+P02 | pontos repetidos, distancia zero
+Entrada:
+3
+1 1
+2 2
+1 1
+Saída esperada (distância ao quadrado): 0
+Exemplo de par ótimo: índices 0 e 2.
+
+P03 | mesma coordenada x e empate
+Entrada:
+4
+2 0
+2 5
+2 1
+2 -1
+Saída esperada (distância ao quadrado): 1
+Exemplo de par ótimo: índices 0 e 2.
+
+P04 | quadrado com varios pares otimos
+Entrada:
+4
+0 0
+0 2
+2 0
+2 2
+Saída esperada (distância ao quadrado): 4
+Exemplo de par ótimo: índices 0 e 1.
+
+P05 | par otimo cruza a linha mediana
+Entrada:
+4
+-1 0
+-100 5
+1 0
+100 5
+Saída esperada (distância ao quadrado): 4
+Exemplo de par ótimo: índices 0 e 2.
+
+P06 | coordenadas negativas
+Entrada:
+3
+-5 -5
+-4 -7
+20 1
+Saída esperada (distância ao quadrado): 5
+Exemplo de par ótimo: índices 0 e 1.
+
+P07 | pontos colineares e nao ordenados
+Entrada:
+4
+20 0
+1 0
+3 0
+11 0
+Saída esperada (distância ao quadrado): 4
+Exemplo de par ótimo: índices 1 e 2.
+
+P08 | fronteira com varios x repetidos
+Entrada:
+11
+0 0
+0 10
+0 20
+0 30
+0 40
+0 49
+0 50
+0 52
+0 60
+0 70
+0 80
+Saída esperada (distância ao quadrado): 1
+Exemplo de par ótimo: índices 5 e 6.
+
+P09 | grande amplitude em coordenadas
+Entrada:
+3
+-1000000000 -1000000000
+1000000000 1000000000
+1000000000 999999999
+Saída esperada (distância ao quadrado): 1
+Exemplo de par ótimo: índices 1 e 2.
+
+P10 | duplicatas em particoes diferentes
+Entrada:
+5
+0 0
+0 0
+0 0
+1 0
+-1 0
+Saída esperada (distância ao quadrado): 0
+Exemplo de par ótimo: índices 0 e 1.
+
+P11 | coordenadas fracionarias
+Entrada:
+3
+0.0 0.0
+0.5 0
+2 2
+Saída esperada (distância ao quadrado): 0.25
+Exemplo de par ótimo: índices 0 e 1.
