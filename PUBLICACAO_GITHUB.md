@@ -20,4 +20,4 @@ O projeto já tem um histórico Git local com commits genuínos feitos durante s
 
 **Atenção:** os commits existentes registram a preparação efetiva atual; o trabalho pede histórico ao longo de semanas. O histórico anterior não pode ser inventado. Se os integrantes desenvolverem melhorias adicionais de fato, registrem essas mudanças normalmente.
 
-**Pendência de identificação:** substitua `[PREENCHER NOME E MATRÍCULA]` pelos dados reais do segundo participante no README e na capa do PDF antes da entrega final. O PDF deve ser regenerado depois que essa identificação for fornecida.
+**Identificação concluída:** a dupla está registrada no README e no relatório em PDF: Yuri Freitas Andrade Maia (2510459) e Fernando Jose Simon Heck (2510386).

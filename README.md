@@ -2,7 +2,7 @@
 
 **Disciplina:** Complexidade e Análise de Algoritmos — UNIFOR  
 **Prazo indicado no enunciado:** 28/10/2026  
-**Equipe:** dupla; Yuri Freitas Andrade Maia (2510459) e **[preencher segundo integrante e matrícula]**.  
+**Equipe:** dupla; Yuri Freitas Andrade Maia (2510459) e **Fernando Jose Simon Heck (2510386)**.  
 **Escopo:** Etapas 1, 2 e 3. A questão desafio NÃO foi implementada, conforme solicitado.
 
 Este repositório implementa, testa e compara soluções de **força bruta** e **divisão e conquista** para os dois problemas exigidos, com resultados experimentais **efetivamente medidos** e relatados em sete páginas de PDF.
@@ -158,7 +158,7 @@ git branch -M main
 git push -u origin main
 ```
 
-O endereço é reservado como sugestão para a conta GitHub conectada `yurifam`: **o repositório ainda precisa ser criado**. Se criar com outro nome, ajuste a URL do comando. Antes de entregar, preencha o nome e matrícula do segundo integrante no **README e no relatório**, crie o repositório em https://github.com/new sem README/licença/.gitignore iniciais, execute os comandos de publicação e confira o link do repositório. O requisito de um histórico que reflita **semanas de desenvolvimento** não pode ser satisfeito retroativamente sem inventar datas.
+O endereço é reservado como sugestão para a conta GitHub conectada `yurifam`: **o repositório ainda precisa ser criado**. Se criar com outro nome, ajuste a URL do comando. Os dados dos dois integrantes já estão preenchidos no README e no relatório. Antes de entregar, crie o repositório em https://github.com/new sem README/licença/.gitignore iniciais, execute os comandos de publicação e confira o link do repositório. O requisito de um histórico que reflita **semanas de desenvolvimento** não pode ser satisfeito retroativamente sem inventar datas.
 
 ## 9. Observações sobre a especificação
 
