@@ -153,12 +153,12 @@ Na Etapa 2, mantém-se a lista ordenada por y a cada nível; a faixa em torno da
 Este diretório inclui um repositório Git local com commits realizados **na data real da preparação dos arquivos**. Não foi fabricado histórico retroativo de semanas anteriores. Para criar o repositório remoto (GitHub, GitLab etc.), algum integrante precisa autenticar-se e executar, após criar um repositório remoto vazio:
 
 ```bash
-git remote add origin https://github.com/USUARIO/NOME-DO-REPOSITORIO.git
+git remote add origin https://github.com/yurifam/trabalho-divisao-conquista.git
 git branch -M main
 git push -u origin main
 ```
 
-Substitua o endereço de exemplo pela URL verdadeira. A URL acima **não é um repositório existente**. Antes de entregar, preencha o nome e matrícula do segundo integrante no **README e no relatório**, suba o projeto para um Git remoto e confira o link do repositório. O requisito de um histórico que reflita **semanas de desenvolvimento** não pode ser satisfeito retroativamente sem inventar datas.
+O endereço é reservado como sugestão para a conta GitHub conectada `yurifam`: **o repositório ainda precisa ser criado**. Se criar com outro nome, ajuste a URL do comando. Antes de entregar, preencha o nome e matrícula do segundo integrante no **README e no relatório**, crie o repositório em https://github.com/new sem README/licença/.gitignore iniciais, execute os comandos de publicação e confira o link do repositório. O requisito de um histórico que reflita **semanas de desenvolvimento** não pode ser satisfeito retroativamente sem inventar datas.
 
 ## 9. Observações sobre a especificação
 
