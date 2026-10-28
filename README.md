@@ -19,7 +19,8 @@ Este repositório implementa, testa e compara soluções de **força bruta** e *
 ├── tests/
 │   ├── casos_teste.json          # Entradas e saídas esperadas (22 casos)
 │   ├── entradas_e_saidas.txt     # Versão legível com exemplos prontos
-│   └── test_algoritmos.py        # Bateria automatizada e diferencial
+│   ├── test_algoritmos.py        # Bateria automatizada e diferencial
+│   └── test_cli.py               # Testes de entrada e saída via terminal
 ├── benchmark.py                  # 5 medições reais por método/tamanho
 ├── gerar_relatorio.py             # Gera gráficos e PDF a partir do CSV
 ├── requirements-relatorio.txt    # Bibliotecas opcionais para gerar o PDF
@@ -113,7 +114,7 @@ O caso-base do algoritmo de divisão e conquista usa por padrão um limiar de **
 python -m unittest discover -s tests -v
 ```
 
-O arquivo `tests/casos_teste.json` oferece **22 casos documentados**, com a entrada e a saída esperadas. A suíte também compara as duas soluções em **3.200 vetores aleatórios**; usa **1.000 conjuntos de pontos** em seis limiares e outros **60 conjuntos sem duplicatas**; verifica a distância e os índices retornados; testa entradas inválidas.
+A suíte possui **13 testes automatizados**, incluindo 7 testes de integração que executam `main.py` pelo terminal e conferem códigos de saída e mensagens de erro. O arquivo `tests/casos_teste.json` oferece **22 casos documentados**, com a entrada e a saída esperadas. A suíte também compara as duas soluções em **3.200 vetores aleatórios**; usa **1.000 conjuntos de pontos** em seis limiares e outros **60 conjuntos sem duplicatas**; verifica a distância e os índices retornados; testa entradas inválidas.
 
 As condições destacadas são: vetor apenas negativo, tamanho 1, empates, cruzamento do meio, todos zeros, pontos repetidos, x iguais, pontos colineares, empates entre pares, coordenadas negativas, valores grandes e coordenadas reais.
 
@@ -150,15 +151,19 @@ Na Etapa 2, mantém-se a lista ordenada por y a cada nível; a faixa em torno da
 
 ## 8. Git e entrega
 
-Este diretório inclui um repositório Git local com commits realizados **na data real da preparação dos arquivos**. Não foi fabricado histórico retroativo de semanas anteriores. Para criar o repositório remoto (GitHub, GitLab etc.), algum integrante precisa autenticar-se e executar, após criar um repositório remoto vazio:
+**Repositório publicado:** https://github.com/yurifam/trabalho-divisao-conquista
+
+A branch principal é `main`, com código, testes, arquivos CSV, gráficos e relatório PDF. O histórico registra commits reais desde a preparação do projeto, incluindo ajustes de documentação e testes de integração acrescentados em 28/10/2026. Esses commits não demonstram desenvolvimento ao longo de semanas anteriores; nenhuma data retroativa foi fabricada.
+
+Para obter uma cópia atualizada:
 
 ```bash
-git remote add origin https://github.com/yurifam/trabalho-divisao-conquista.git
-git branch -M main
-git push -u origin main
+git clone https://github.com/yurifam/trabalho-divisao-conquista.git
+cd trabalho-divisao-conquista
+python -m unittest discover -s tests -v
 ```
 
-O endereço é reservado como sugestão para a conta GitHub conectada `yurifam`: **o repositório ainda precisa ser criado**. Se criar com outro nome, ajuste a URL do comando. Os dados dos dois integrantes já estão preenchidos no README e no relatório. Antes de entregar, crie o repositório em https://github.com/new sem README/licença/.gitignore iniciais, execute os comandos de publicação e confira o link do repositório. O requisito de um histórico que reflita **semanas de desenvolvimento** não pode ser satisfeito retroativamente sem inventar datas.
+O relatório já identifica a dupla: Yuri Freitas Andrade Maia (2510459) e Fernando Jose Simon Heck (2510386).
 
 ## 9. Observações sobre a especificação
 
