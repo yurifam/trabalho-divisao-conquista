@@ -12,6 +12,7 @@ Este repositório implementa, testa e compara soluções de **força bruta** e *
 ```text
 .
 ├── README.md
+├── .github/workflows/testes.yml  # Validação automática no GitHub Actions
 ├── main.py                       # Entrada e saída via terminal
 ├── src/
 │   ├── __init__.py
@@ -20,7 +21,8 @@ Este repositório implementa, testa e compara soluções de **força bruta** e *
 │   ├── casos_teste.json          # Entradas e saídas esperadas (22 casos)
 │   ├── entradas_e_saidas.txt     # Versão legível com exemplos prontos
 │   ├── test_algoritmos.py        # Bateria automatizada e diferencial
-│   └── test_cli.py               # Testes de entrada e saída via terminal
+│   ├── test_cli.py               # Testes de entrada e saída via terminal
+│   └── test_regressoes.py        # Casos de regressão determinísticos
 ├── benchmark.py                  # 5 medições reais por método/tamanho
 ├── gerar_relatorio.py             # Gera gráficos e PDF a partir do CSV
 ├── requirements-relatorio.txt    # Bibliotecas opcionais para gerar o PDF
@@ -74,7 +76,7 @@ python main.py subarranjo divisao < exemplos/subarranjo.txt
 
 ## 4. Como executar — Etapa 2
 
-A entrada é `n` seguido de `n` linhas `x y`. Coordenadas inteiras ou reais são aceitas. A saída apresenta a distância euclidiana, a distância ao quadrado e o par de índices da entrada, iniciando em zero. Se houver mais de um par com distância mínima, **qualquer um é resposta correta**.
+A entrada é `n` seguido de `n` linhas `x y`. Coordenadas inteiras ou reais são aceitas. A saída padrão apresenta a distância euclidiana e os dois índices dos pontos da entrada, iniciando em zero. A opção `--detalhado` mostra também a distância ao quadrado. Se houver mais de um par com distância mínima, **qualquer um é resposta correta**.
 
 **Exemplo de entrada:**
 
@@ -114,9 +116,11 @@ O caso-base do algoritmo de divisão e conquista usa por padrão um limiar de **
 python -m unittest discover -s tests -v
 ```
 
-A suíte possui **13 testes automatizados**, incluindo 7 testes de integração que executam `main.py` pelo terminal e conferem códigos de saída e mensagens de erro. O arquivo `tests/casos_teste.json` oferece **22 casos documentados**, com a entrada e a saída esperadas. A suíte também compara as duas soluções em **3.200 vetores aleatórios**; usa **1.000 conjuntos de pontos** em seis limiares e outros **60 conjuntos sem duplicatas**; verifica a distância e os índices retornados; testa entradas inválidas.
+A suíte possui **19 testes automatizados**: 6 testes originais, 7 testes de integração que executam `main.py` pelo terminal e 6 testes determinísticos de regressão. Estes últimos verificam empates, subarranjos que cruzam o meio, valores grandes, pontos duplicados e pontos com coordenadas reais. O arquivo `tests/casos_teste.json` oferece **22 casos documentados**, com a entrada e a saída esperadas. A suíte também compara as duas soluções em **3.200 vetores aleatórios**; usa **1.000 conjuntos de pontos** em seis limiares e outros **60 conjuntos sem duplicatas**; verifica a distância e os índices retornados; testa entradas inválidas.
 
 As condições destacadas são: vetor apenas negativo, tamanho 1, empates, cruzamento do meio, todos zeros, pontos repetidos, x iguais, pontos colineares, empates entre pares, coordenadas negativas, valores grandes e coordenadas reais.
+
+A verificação automática também está configurada em `.github/workflows/testes.yml`, executando a suíte `unittest` em Python 3.10 e 3.13 a cada push na `main` e em pull requests. O resultado das execuções fica na aba **Actions** do GitHub.
 
 ## 6. Reproduzir as medições e os gráficos
 
@@ -153,7 +157,7 @@ Na Etapa 2, mantém-se a lista ordenada por y a cada nível; a faixa em torno da
 
 **Repositório publicado:** https://github.com/yurifam/trabalho-divisao-conquista
 
-A branch principal é `main`, com código, testes, arquivos CSV, gráficos e relatório PDF. O histórico registra commits reais desde a preparação do projeto, incluindo ajustes de documentação e testes de integração acrescentados em 28/10/2026. Esses commits não demonstram desenvolvimento ao longo de semanas anteriores; nenhuma data retroativa foi fabricada.
+A branch principal é `main`, com código, testes, arquivos CSV, gráficos e relatório PDF. O histórico registra commits reais desde a preparação do projeto, incluindo testes de integração acrescentados em 28/10/2026 e testes de regressão e integração contínua acrescentados em 31/10/2026. Esses commits não demonstram desenvolvimento ao longo de semanas anteriores; nenhuma data retroativa foi fabricada.
 
 Para obter uma cópia atualizada:
 
